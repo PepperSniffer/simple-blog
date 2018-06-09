@@ -1,0 +1,7 @@
+doctype html 
+html
+  head
+    title=article.name
+  body
+    h1=article.name
+    p!=article.content.replace(/\n/g,"<br/>")

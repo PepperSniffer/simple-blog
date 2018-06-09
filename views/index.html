@@ -1,5 +1,22 @@
 doctype html 
-head
-  title XXX
-body
-  Hello world
+html
+  head
+    title superBlog
+  body
+    h1 Super Blog
+    a(href="/post/create") 
+      button Create your own Post
+    table
+      thead
+        tr
+          th ID
+          th NAME
+          th Preview
+      tbody
+        each article in articles
+          tr
+            
+            td
+              a(href="/post/"+article._id) #{article._id}
+            td=article.name 
+            td=article.content.substr(0, 20) + '...'
